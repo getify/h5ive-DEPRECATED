@@ -7,12 +7,14 @@ This is **not** a "HTML5 shim|v" for semantic tags. It is **not** a library or f
 
 Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of H5api.
 
+
 h5api.js
 ========
 
 This single file is what you will include in your HTML5 JavaScript projects. It will eventually be customizable with a build-tool, so you can include only which API modules you need.
 
 The entire API will be under the `H5` namespace. For instance, XHR2 will (probably) be exposed as `H5.xhr`.
+
 
 License
 =======
