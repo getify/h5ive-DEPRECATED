@@ -16,22 +16,24 @@ Contributions are obviously welcomed and encouraged. But let's be a little bit i
 
 1. Pick one the native HTML5 APIs that you have some familiarity with, perhaps from this list:
 
-  * History
-  * Web Workers
-  * Web Sockets
-  * Geolocation
-  * &lt;audio> / &lt;video>
-  * getUserMedia
-  * File / FileSystem
-  * Web DBs
-  * BlobBuilder
-  * Blob URLs
-  * FormData
-  * Device APIs
-  * Server-Sent Events
-  * appCache
-  * Web Intents
-  * registerProtocolHandler
+   ```
+   History
+   Web Workers
+   Web Sockets
+   Geolocation
+   <audio> / <video>
+   getUserMedia
+   File / FileSystem
+   Web DBs
+   BlobBuilder
+   Blob URLs
+   FormData
+   Device APIs
+   Server-Sent Events
+   appCache
+   Web Intents
+   registerProtocolHandler
+   ```
 
 2. This project will follow "example-driven development" practices. Make an `example-{WRAPPER_NAME}.js` file that illustrates how you think the API facade will/should be used.
 
