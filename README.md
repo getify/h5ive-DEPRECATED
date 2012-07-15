@@ -14,7 +14,7 @@ Contributions
 =============
 Contributions are obviously welcomed and encouraged. But let's be a little bit intentional about how we want this to work. Here are some suggestions for how to be most friendly in terms of contributions:
 
-1. Pick one the native HTML5 APIs that you have some familiarity with, perhaps from this list:
+1. Pick of one the native HTML5 APIs that you have some familiarity with, perhaps from this list:
 
    ```
    History
