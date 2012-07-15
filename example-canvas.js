@@ -43,7 +43,7 @@ cnv
 })
 .popState()
 .startPath(350,350)
-define([
+.defineSegments([
 	{ arc: [350,350,Math.PI/2,3*Math.PI/2,true] }
 ])
 .endPath({
