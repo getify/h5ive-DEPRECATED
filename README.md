@@ -1,7 +1,7 @@
 H5api
 =====
 
-A collection of thin facade APIs wrapped around HTML5 JavaScript features. The goal is to provide a simple layer of abstraction on top of the native APIs, to insulate you the developer from potential inconsistencies, bugs, and even specification changes.
+A collection of thin facade APIs wrapped around HTML5 JavaScript features. The goal is to provide a simple layer of abstraction on top of the native APIs, to insulate you the developer (and more importantly, your production code!) from potential inconsistencies, bugs, and even specification changes.
 
 Want more information about the motivations behind this project? Check out this slide-deck: https://speakerdeck.com/u/getify/p/stop-using-native-html5 (video will be posted from this talk as soon as it's available).
 
