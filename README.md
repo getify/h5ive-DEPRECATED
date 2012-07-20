@@ -60,7 +60,7 @@ h5ive.js
 
 This single file is what you will include in your HTML5 JavaScript projects. It will eventually be customizable with a build-tool, which will let you pick which "module format" (AMD, CommonJS, customized module, etc) you prefer, and then include only which API modules you need.
 
-The entire API will be under the `H5` namespace. For instance, XHR2 will be exposed as `H5.xhr`.
+The entire API will be under the `h5` namespace. For instance, XHR2 will be exposed as `h5.xhr`.
 
 
 License

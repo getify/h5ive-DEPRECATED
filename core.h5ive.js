@@ -2,7 +2,7 @@
 
 (function(global){
 
-	global.H5 = {
+	global.h5 = {
 		// TODO: fill in core API functions
 	};
 

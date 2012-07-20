@@ -1,4 +1,4 @@
-var cnv = H5.canvas({
+var cnv = h5.canvas({
 	width: 500,
 	height: 500,
 	matchDimensions: true // make the CSS dimensions match the attribute dimensions

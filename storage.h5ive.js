@@ -1,10 +1,10 @@
 /*! storage.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
-(function(H5){
+(function(h5){
 
-	if (!H5) throw new Error("storage.h5ive: core.h5ive required.");
+	if (!h5) throw new Error("storage.h5ive: core.h5ive required.");
 
-	H5.storage = function(opts) {
+	h5.storage = function(opts) {
 		var store, publicAPI, expires;
 
 		opts = opts || {};
@@ -66,4 +66,4 @@
 		return publicAPI;
 	};
 
-})(this.H5);
+})(this.h5);

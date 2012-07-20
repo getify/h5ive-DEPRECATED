@@ -1,6 +1,6 @@
-var keep = H5.storage();
-var session = H5.storage({ expires: "session" });
-var temp = H5.storage({ expires: 5*60*1000 }); // 5 minutes
+var keep = h5.storage();
+var session = h5.storage({ expires: "session" });
+var temp = h5.storage({ expires: 5*60*1000 }); // 5 minutes
 
 
 keep
