@@ -2,7 +2,7 @@
 
 (function(H5){
 
-	if (!H5) throw new Error("storage.H5ive: core.H5ive required.");
+	if (!H5) throw new Error("storage.h5ive: core.h5ive required.");
 
 	H5.storage = function(opts) {
 		var store, publicAPI, expires;

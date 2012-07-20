@@ -2,7 +2,7 @@
 
 (function(H5){
 
-	if (!H5) throw new Error("canvas.H5ive: core.H5ive required.");
+	if (!H5) throw new Error("canvas.h5ive: core.h5ive required.");
 
 	H5.canvas = function(cOpts) {
 		var publicAPI, CANVAS, CONTEXT,

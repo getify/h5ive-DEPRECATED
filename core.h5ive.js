@@ -1,4 +1,4 @@
-/*! core.H5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! core.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
 (function(global){
 

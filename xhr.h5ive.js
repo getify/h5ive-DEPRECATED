@@ -2,7 +2,7 @@
 
 (function(H5){
 
-	if (!H5) throw new Error("xhr.H5ive: core.H5ive required.");
+	if (!H5) throw new Error("xhr.h5ive: core.h5ive required.");
 
 	H5.xhr = function(opts) {
 		var XHR, publicAPI, used = false;

@@ -1,4 +1,4 @@
-H5ive
+h5ive
 =====
 
 A collection of thin facade APIs wrapped around HTML5 JavaScript features. The goal is to provide a simple layer of abstraction on top of the native APIs, to insulate you the developer (and more importantly, your production code!) from potential inconsistencies, bugs, and even specification changes.
@@ -7,7 +7,7 @@ Want more information about the motivations behind this project? Check out this 
 
 This is **not** a "HTML5 shim|v" for semantic tags. It is **not** a library or framework. It is **not** a polyfill for older browsers. It is **not** a replacement for Modernizr (though it *will* have basic feature tests for the APIs it wraps).
 
-Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of H5ive.
+Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of h5ive.
 
 
 Contributions
