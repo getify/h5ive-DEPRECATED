@@ -1,4 +1,4 @@
-H5api
+H5ive
 =====
 
 A collection of thin facade APIs wrapped around HTML5 JavaScript features. The goal is to provide a simple layer of abstraction on top of the native APIs, to insulate you the developer (and more importantly, your production code!) from potential inconsistencies, bugs, and even specification changes.
@@ -7,7 +7,7 @@ Want more information about the motivations behind this project? Check out this 
 
 This is **not** a "HTML5 shim|v" for semantic tags. It is **not** a library or framework. It is **not** a polyfill for older browsers. It is **not** a replacement for Modernizr (though it *will* have basic feature tests for the APIs it wraps).
 
-Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of H5api.
+Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of H5ive.
 
 
 Contributions
@@ -41,7 +41,7 @@ Contributions are obviously welcomed and encouraged. But let's be a little bit i
 
 3. Submit a pull-request with **only** your example file, and explain the API facade you are proposing. We'll discuss it in that pull request.
 
-4. Once we feel that the API facade is in good shape, amend your pull request to include a sample implementation (named `{WRAPPER_NAME}.h5api.js`, and we'll take it from there.
+4. Once we feel that the API facade is in good shape, amend your pull request to include a sample implementation (named `{WRAPPER_NAME}.h5ive.js`, and we'll take it from there.
 
 
 Also, **PLEASE** avoid these things:
@@ -55,7 +55,7 @@ Also, **PLEASE** avoid these things:
 4. Worry too much about stuff like if this will be AMD-compliant or whatever. We'll decide on all that stuff later. There will be a build-tool, and it'll have options for you to pick which flavor you prefer.
 
 
-h5api.js
+h5ive.js
 ========
 
 This single file is what you will include in your HTML5 JavaScript projects. It will eventually be customizable with a build-tool, which will let you pick which "module format" (AMD, CommonJS, customized module, etc) you prefer, and then include only which API modules you need.

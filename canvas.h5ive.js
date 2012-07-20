@@ -1,8 +1,8 @@
-/*! canvas.h5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! canvas.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
 (function(H5){
 
-	if (!H5) throw new Error("canvas.H5api: core.H5api required.");
+	if (!H5) throw new Error("canvas.H5ive: core.H5ive required.");
 
 	H5.canvas = function(cOpts) {
 		var publicAPI, CANVAS, CONTEXT,

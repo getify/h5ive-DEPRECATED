@@ -1,8 +1,8 @@
-/*! xhr.h5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! xhr.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
 (function(H5){
 
-	if (!H5) throw new Error("xhr.H5api: core.H5api required.");
+	if (!H5) throw new Error("xhr.H5ive: core.H5ive required.");
 
 	H5.xhr = function(opts) {
 		var XHR, publicAPI, used = false;
