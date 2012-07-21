@@ -1,10 +1,10 @@
-/*! storage.h5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! storage.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
-(function(H5){
+(function(h5){
 
-	if (!H5) throw new Error("storage.H5api: core.H5api required.");
+	if (!h5) throw new Error("storage.h5ive: core.h5ive required.");
 
-	H5.storage = function(opts) {
+	h5.storage = function(opts) {
 		var store, publicAPI, expires;
 
 		opts = opts || {};
@@ -19,8 +19,8 @@
 			var key, val;
 
 			for (key in data) {
-				val = { "h5api:data": data[key] };
-				if (expires) val["h5api:expires"] = expires;
+				val = { "h5ive:data": data[key] };
+				if (expires) val["h5ive:expires"] = expires;
 
 				store.setItem(key,JSON.stringify(val));
 			}
@@ -43,12 +43,12 @@
 				val = ret[keys[i]] = store.getItem(keys[i]);
 				try {
 					val = JSON.parse(val);
-					if ("h5api:data" in val) {
-						if ("h5api:expires" in val && now >= val["h5api:expires"]) {
+					if ("h5ive:data" in val) {
+						if ("h5ive:expires" in val && now >= val["h5ive:expires"]) {
 							delete ret[keys[i]];
 							continue;
 						}
-						ret[keys[i]] = val["h5api:data"];
+						ret[keys[i]] = val["h5ive:data"];
 					}
 				}
 				catch (err) { }
@@ -66,4 +66,4 @@
 		return publicAPI;
 	};
 
-})(this.H5);
+})(this.h5);
