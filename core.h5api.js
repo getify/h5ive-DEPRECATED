@@ -31,8 +31,9 @@
 			events = this._splitEvents( events );
 			var flag;
 			//events.forEach(function
+			var self = this;
 			return !!( events.reduce(function ( memo, event ) {
-				var callbacks = this._callbacks[ event ];
+				var callbacks = self._callbacks[ event ];
 				// Has at least one event
 				if ( callbacks && callbacks.length ) {
 					return memo + 1;
@@ -78,14 +79,14 @@
 			var args = arraySlice.call( arguments, 1 );
 			
 			if ( this._hasCallbacks( events ) ) {
-				events.forEach(function ( event ) {
+				this._splitEvents( events ).forEach(function ( event ) {
 					var callbacks = this._callbacks[ event ] = 
 						( this._callbacks[ event ] || [] );
 
 					callbacks.forEach(function ( callback ) {
 						callback.fn.apply( callback.ctx, args );
 					});
-				});
+				}, this);
 			} // END IF
 			return this;
 		}
