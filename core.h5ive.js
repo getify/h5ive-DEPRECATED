@@ -1,7 +1,6 @@
-/*! core.H5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! core.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
 (function(global){
-	'use strict';
 
 	// Trevor Landau - github.com/landau
 	// expose a pub sub object to h5api users and h5api modules
@@ -91,13 +90,9 @@
 			return this;
 		}
 	};
-
-
-	global.H5 = {
+	global.h5 = {
 		// TODO: fill in core API functions
-
 		PubSub: PubSub	
-
 	};
 
 })(this);

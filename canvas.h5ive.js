@@ -1,10 +1,10 @@
-/*! canvas.h5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! canvas.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
-(function(H5){
+(function(h5){
 
-	if (!H5) throw new Error("canvas.H5api: core.H5api required.");
+	if (!h5) throw new Error("canvas.h5ive: core.h5ive required.");
 
-	H5.canvas = function(cOpts) {
+	h5.canvas = function(cOpts) {
 		var publicAPI, CANVAS, CONTEXT,
 			cWidth, cHeight, in_path = false,
 			segmentTypes = {
@@ -212,4 +212,4 @@
 		return publicAPI;
 	};
 
-})(this.H5);
+})(this.h5);

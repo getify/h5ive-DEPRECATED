@@ -1,6 +1,6 @@
-var data = H5.formData(document.getElementById("my_form"));
+var data = h5.formData(document.getElementById("my_form"));
 
-H5
+h5
 .xhr({ method: "POST" })
 .connect("http://example.com")
 .send(data)

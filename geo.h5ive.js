@@ -1,10 +1,10 @@
-/*! geo.H5api.js | (c) Trevor Landau | MIT License: http://getify.mit-license.org */
+/*! geo.h5ive.js | (c) Trevor Landau | MIT License: http://getify.mit-license.org */
 
-(function(H5){
+(function(h5){
 	'use strict';
-	if (!H5) throw new Error("storage.H5api: core.H5api required.");
+	if (!h5) throw new Error("storage.h5api: core.h5api required.");
 
-	var pubsub = new H5.PubSub();
+	var pubsub = new h5.PubSub();
 	var geo = window.navigator.geolocation;
 
 	var methods = {
@@ -12,7 +12,7 @@
 		watch: 'watchPosition'
 	}
 	var id;
-	H5.geo = {
+	h5.geo = {
 
 		get: function get( opts ) {
 			opts = opts || {};
@@ -76,5 +76,5 @@
 			return this;
 		}
 	};
-})(this.H5);
+})(this.h5);
 

@@ -1,10 +1,10 @@
-/*! xhr.h5api.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
+/*! xhr.h5ive.js | (c) Kyle Simpson | MIT License: http://getify.mit-license.org */
 
-(function(H5){
+(function(h5){
 
-	if (!H5) throw new Error("xhr.H5api: core.H5api required.");
+	if (!h5) throw new Error("xhr.h5ive: core.h5ive required.");
 
-	H5.xhr = function(opts) {
+	h5.xhr = function(opts) {
 		var XHR, publicAPI, used = false;
 
 		function connect(url) {
@@ -81,4 +81,4 @@
 		return publicAPI;
 	};
 
-})(this.H5);
+})(this.h5);
