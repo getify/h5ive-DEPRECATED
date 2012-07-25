@@ -4,6 +4,7 @@
 
 	// Trevor Landau - github.com/landau
 	// We may or may not need this....
+	// Perhaps in some facades only, we'll see.
 	// expose a pub sub object to h5api users and h5api modules
 	function PubSub() { 
 		this._callbacks = {};	
