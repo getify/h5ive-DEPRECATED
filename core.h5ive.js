@@ -3,12 +3,13 @@
 (function(global){
 
 	// Trevor Landau - github.com/landau
+	// We may or may not need this....
 	// expose a pub sub object to h5api users and h5api modules
 	function PubSub() { 
 		this._callbacks = {};	
 	}
 
-	var splt = /\s/g;
+	var splt = /\s+/g;
 	var arraySlice = Array.prototype.slice;
 	PubSub.prototype = {
 
