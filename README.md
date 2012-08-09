@@ -3,7 +3,7 @@ h5ive
 
 A collection of thin facade APIs wrapped around HTML5 JavaScript features. The goal is to provide a simple layer of abstraction on top of the native APIs, to insulate you the developer (and more importantly, your production code!) from potential inconsistencies, bugs, and even specification changes.
 
-Want more information about the motivations behind this project? Check out this slide-deck: https://speakerdeck.com/u/getify/p/stop-using-native-html5 (video will be posted from this talk as soon as it's available).
+Want more information about the motivations behind this project? Check out this slide-deck: https://speakerdeck.com/u/getify/p/stop-using-native-html5 (video will be posted from this talk as soon as it's available). Also, [Nicholas Zakas](http://twitter.com/slicknet) wrote a fantastic article: [The Problem with Native JavaScript APIs](http://oreillynet.com/oreilly/javascript/radarreports/native-javascript-apis.csp), which was my inspiration for the h5ive project.
 
 This is **not** a "HTML5 shim|v" for semantic tags. It is **not** a library or framework. It is **not** a polyfill for older browsers. It is **not** a replacement for Modernizr (though it *will* have basic feature tests for the APIs it wraps).
 
