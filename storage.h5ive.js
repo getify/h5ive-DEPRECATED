@@ -8,8 +8,8 @@
 		var store, publicAPI, expires;
 
 		opts = opts || {};
-		if ("expires" in opts && typeof opts.expires == "number" && opts.expires > 0) {
-			expires = (New Date()) + opts.expires;
+		if ("expires" in opts && typeof opts.expires === "number" && opts.expires > 0) {
+			expires = opts.expires + (new Date()).getTime();
 		}
 		if (opts.expires == "session") store = sessionStorage;
 		else store = localStorage;
@@ -29,6 +29,7 @@
 		}
 
 		function discard(keys) {
+			if (Object.prototype.toString.call(keys) != "[object Array]") keys = [keys];
 			for (var i=0; i<keys.length; i++) {
 				store.removeItem(keys[i]);
 			}
@@ -37,7 +38,9 @@
 		}
 
 		function get(keys) {
-			var i, val, ret, now = 0 + (new Date());
+			var i, val, ret = [], now = (new Date()).getTime();
+
+			if (Object.prototype.toString.call(keys) !== "[object Array]") keys = [keys];
 
 			for (i=0; i<keys.length; i++) {
 				val = ret[keys[i]] = store.getItem(keys[i]);
@@ -52,6 +55,11 @@
 					}
 				}
 				catch (err) { }
+			}
+
+			if (keys.length < 2) {
+				if (keys.length > 0 && (keys[0] in ret)) return ret[keys[0]];
+				else return;
 			}
 
 			return ret;

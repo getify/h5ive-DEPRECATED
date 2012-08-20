@@ -21,6 +21,8 @@ temp.save({
 	active_login: session.get("session_id") // only keep this around for a little while
 });
 
+var text = document.createTextNode("active_login: " + temp.get("active_login"));
+document.body.appendChild(text);
 
 /*
 session.listen(function(info){
