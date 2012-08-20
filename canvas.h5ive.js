@@ -18,10 +18,10 @@
 
 		// process the options
 		cOpts = cOpts || {};
-		cOpts.width = ("width" in cOpts) ? cOpts.width || 300;
-		cOpts.height = ("height" in cOpts) ? cOpts.height || 150;
-		cOpts.matchDimensions = ("matchDimensions" in cOpts) ? cOpts.matchDimensions || true;
-		cOpts.type = (cOpts.type == "webgl") ? "experimental-webgl" || "2d";
+		cOpts.width = ("width" in cOpts) ? cOpts.width : 300;
+		cOpts.height = ("height" in cOpts) ? cOpts.height : 150;
+		cOpts.matchDimensions = ("matchDimensions" in cOpts) ? cOpts.matchDimensions : true;
+		cOpts.type = (cOpts.type == "webgl") ? "experimental-webgl" : "2d";
 
 
 		function create() {
@@ -57,7 +57,7 @@
 				if ("caps" in styles.stroke) CONTEXT.lineCap = styles.stroke.caps;
 				if ("joints" in styles.stroke) CONTEXT.lineJoin = styles.stroke.joints;
 				if ("color" in styles.stroke) CONTEXT.strokeStyle = styles.stroke.color;
-				if ("miter" in styles.miter) CONTEXT.miterLimit = styles.stroke.miterLimit;
+				if ("miter" in styles.stroke) CONTEXT.miterLimit = styles.stroke.miter;
 			}
 			if (styles.fill) {
 				if ("color" in styles.fill) CONTEXT.fillStyle = styles.fill.color;
@@ -75,8 +75,8 @@
 		function startPath(x,y) {
 			if (in_path) throw new Error("A path is still currently being defined. End it first.");
 
-			if (x != null && y != null) CONTEXT.moveTo(x,y);
 			CONTEXT.beginPath();
+			if (x != null && y != null) CONTEXT.moveTo(x,y);
 
 			in_path = true;
 
@@ -90,11 +90,11 @@
 
 			segments = segments || [];
 
-			for (var i=0 i<segments.length; i++) {
+			for (var i=0; i<segments.length; i++) {
 				segment = segments[i];
 				type = Object.keys(segment)[0];
 				if (type in segmentTypes) {
-					CONTEXT[segment.type].apply(CONTEXT,segment);
+					CONTEXT[type].apply(CONTEXT,segment[type]);
 				}
 			}
 

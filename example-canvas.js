@@ -4,7 +4,7 @@ var cnv = h5.canvas({
 	matchDimensions: true // make the CSS dimensions match the attribute dimensions
 });
 
-document.body.append(cnv.create());
+document.body.appendChild(cnv.create());
 
 cnv
 .clear()
@@ -15,10 +15,10 @@ cnv
 		color: "#fc6"	
 	},
 	fill: {
-		color: "#999"
+		color: "#009"
 	}
 })
-.startPath(10,10)
+.startPath(75,100)
 .defineSegments([
 	{ lineTo: [200,200] },
 	{ lineTo: [100,50] }
@@ -30,8 +30,10 @@ cnv
 })
 .pushState()
 .setStyles({
+	stroke: {
+		color: "black"
+	},
 	fill: {
-		stroke: "black",
 		color: "red"
 	}
 })
@@ -42,9 +44,9 @@ cnv
 	stroke: [400,400,50,50]
 })
 .popState()
-.startPath(350,350)
+.startPath(275,275)
 .defineSegments([
-	{ arc: [350,350,Math.PI/2,3*Math.PI/2,true] }
+	{ arc: [275,275,100,Math.PI/2,3*Math.PI/2,true] }
 ])
 .endPath({
 	fill: true
