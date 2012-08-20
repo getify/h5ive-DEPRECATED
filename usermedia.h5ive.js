@@ -56,7 +56,6 @@
 				opts_str += (opts_str != "" ? "," : "") + idx;
 			}}
 			try {
-				console.log(JSON.stringify(opts));
 				gUM.call(navigator,opts,handleSuccess,handleFailure);
 			}
 			catch (err) {
