@@ -23,20 +23,17 @@
 		cOpts.matchDimensions = ("matchDimensions" in cOpts) ? cOpts.matchDimensions : true;
 		cOpts.type = (cOpts.type == "webgl") ? "experimental-webgl" : "2d";
 
+		CANVAS = document.createElement("canvas");
+		CANVAS.setAttribute("width",cOpts.width);
+		CANVAS.setAttribute("height",cOpts.height);
+		if (cOpts.matchDimensions) {
+			CANVAS.style.width = cOpts.width + "px";
+			CANVAS.style.height = cOpts.height + "px";
+		}
 
-		function create() {
-			if (CANVAS) throw new Error("Canvas element already created.");
+		CONTEXT = CANVAS.getContext(cOpts.type);
 
-			CANVAS = document.createElement("canvas");
-			CANVAS.setAttribute("width",cOpts.width);
-			CANVAS.setAttribute("height",cOpts.height);
-			if (cOpts.matchDimensions) {
-				CANVAS.style.width = cOpts.width + "px";
-				CANVAS.style.height = cOpts.height + "px";
-			}
-
-			CONTEXT = CANVAS.getContext(cOpts.type);
-
+		function element() {
 			return CANVAS;
 		}
 
@@ -193,7 +190,7 @@
 		publicAPI = {
 			__raw__: CANVAS,
 			__raw__context__: CONTEXT,
-			create: create,
+			element: element,
 			clear: clear,
 			setStyles: setStyles,
 			startPath: startPath,

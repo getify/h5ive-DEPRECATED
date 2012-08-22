@@ -4,7 +4,7 @@ var cnv = h5.canvas({
 	matchDimensions: true // make the CSS dimensions match the attribute dimensions
 });
 
-document.body.appendChild(cnv.create());
+document.body.appendChild(cnv.element());
 
 cnv
 .clear()
