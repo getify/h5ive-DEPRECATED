@@ -9,6 +9,16 @@ This is **not** a "HTML5 shim|v" for semantic tags. It is **not** a library or f
 
 Some API sugar flavor will be included, but do not expect for this library to be as sugary as something like jQuery. You can wrap other abstraction layers easily on top of h5ive.
 
+Testing
+=======
+
+It will be an important (read: mandated) part of the culture of this project that all code which is submitted must have some reasonable tests. 
+
+First and foremost, each module starts with an example usage of the API (see "Contributions" below), so the eventual submitted code for that module must at a minimum actually "pass" the test of being able to run the example API we agree on.
+
+Moreover, contributors should make a good effort to provide one or more integration tests (unit tests not necessarily required), which ideally will be automatable.
+
+We have not yet, as a project, chosen a specific testing framework or approach, so these statements are not mandating how the tests are written, only that there must be a good faith effort to provide tests along with code. A first priority will be to write tests for the code which is already in this repository.
 
 Contributions
 =============
@@ -40,7 +50,7 @@ Contributions are obviously welcomed and encouraged. But let's be a little bit i
 
 3. Submit a pull-request with **only** your example file, and explain the API facade you are proposing. We'll discuss it in that pull request.
 
-4. Once we feel that the API facade is in good shape, amend your pull request to include a sample implementation (named `{WRAPPER_NAME}.h5ive.js`, and we'll take it from there.
+4. Once we feel that the API facade is in good shape, amend your pull request to include a sample implementation (named `{WRAPPER_NAME}.h5ive.js`, and we'll take it from there. **NOTE:** please also include one or more tests along with the module's implementation (see "Testing" above).
 
 
 Also, **PLEASE** avoid these things:
