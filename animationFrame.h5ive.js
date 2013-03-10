@@ -4,16 +4,14 @@
 
 	if (!h5) throw new Error("animationFrame.h5ive: core.h5ive required.");
 
-	var rAF = (window.msRequestAnimationFrame || window.mozRequestAnimationFrame ||
-			window.webkitRequestAnimationFrame || window.oRequestAnimationFrame ||
-			window.requestAnimationFrame
-		),
-		cAF = (window.msCancelAnimationFrame || window.msCancelRequestAnimationFrame ||
+	var rAF = (window.requestAnimationFrame || window.msRequestAnimationFrame ||
+			window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame ||
+			window.oRequestAnimationFrame),
+		cAF = (window.cancelAnimationFrame ||
+			window.msCancelAnimationFrame || window.msCancelRequestAnimationFrame ||
 			window.mozCancelAnimationFrame || window.mozCancelRequestAnimationFrame ||
 			window.webkitCancelAnimationFrame || window.webkitCancelRequestAnimationFrame ||
-			window.oCancelAnimationFrame || window.oCancelRequestAnimationFrame ||
-			window.cancelAnimationFrame
-		),
+			window.oCancelAnimationFrame || window.oCancelRequestAnimationFrame),
 		publicAPI, q_ids = {}
 	;
 
