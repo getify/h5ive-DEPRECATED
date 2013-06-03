@@ -49,6 +49,7 @@
 					if ("h5ive:data" in val) {
 						if ("h5ive:expires" in val && now >= val["h5ive:expires"]) {
 							delete ret[keys[i]];
+							store.removeItem(keys[i]);
 							continue;
 						}
 						ret[keys[i]] = val["h5ive:data"];
