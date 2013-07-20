@@ -47,7 +47,6 @@
 		function setStyles(styles) {
 			styles = styles || {};
 
-			if ("font" in styles) CONTEXT.font = styles.font;
 			if ("composite" in styles) CONTEXT.globalCompositeOperation = styles.composite;
 			if ("alpha" in styles) CONTEXT.globalAlpha = styles.alpha;
 			if (styles.stroke) {
@@ -65,6 +64,11 @@
 				if ("offsetY" in styles.shadow) CONTEXT.shadowOffsetY = styles.shadow.offsetY;
 				if ("blur" in styles.shadow) CONTEXT.shadowBlur = styles.shadow.blur;
 				if ("color" in styles.shadow) CONTEXT.shadowColor = styles.shadow.color;
+			}
+			if ("text" in styles) {
+				if ("font" in styles.text) CONTEXT.font = styles.font;
+				if ("align" in styles.text) CONTEXT.textAlign = styles.align;
+				if ("baseline" in styles.text) CONTEXT.textBaseline = styles.baseline;
 			}
 
 			return publicAPI;
@@ -119,6 +123,15 @@
 			if (opts.path) defineSegments([ {rect: opts.path} ]);
 			else if (opts.stroke) CONTEXT.strokeRect.apply(CONTEXT,opts.stroke);
 			else if (opts.fill) CONTEXT.fillRect.apply(CONTEXT,opts.fill);
+
+			return publicAPI;
+		}
+
+		function text(opts) {
+			opts = opts || {};
+
+			if (opts.stroke) CONTEXT.strokeText.apply(CONTEXT,opts.stroke);
+			else if (opts.fill) CONTEXT.fillText.apply(CONTEXT,opts.fill);
 
 			return publicAPI;
 		}
