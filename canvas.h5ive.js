@@ -47,6 +47,7 @@
 		function setStyles(styles) {
 			styles = styles || {};
 
+			if ("font" in styles) CONTEXT.font = styles.font;
 			if ("composite" in styles) CONTEXT.globalCompositeOperation = styles.composite;
 			if ("alpha" in styles) CONTEXT.globalAlpha = styles.alpha;
 			if (styles.stroke) {
