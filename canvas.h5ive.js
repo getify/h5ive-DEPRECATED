@@ -211,6 +211,7 @@
 			defineSegments: defineSegments,
 			endPath: endPath,
 			rect: rect,
+			text: text,
 			transform: transform,
 			shiftPathTo: shiftPathTo,
 			pushState: pushState,
