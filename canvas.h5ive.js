@@ -6,7 +6,7 @@
 
 	h5.canvas = function(cOpts) {
 		var publicAPI, CANVAS, CONTEXT,
-			cWidth, cHeight, in_path = false,
+			in_path = false,
 			segmentTypes = {
 				lineTo: 1,
 				arc: 1,
@@ -38,7 +38,7 @@
 		}
 
 		function clear() {
-			if (arguments.length == 0) CONTEXT.clearRect(0,0,cWidth,cHeight);
+			if (arguments.length == 0) CONTEXT.clearRect(0,0,cOpts.width,cOpts.height);
 			else CONTEXT.clearRect.apply(CONTEXT,arguments);
 
 			return publicAPI;
