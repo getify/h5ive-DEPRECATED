@@ -66,9 +66,9 @@
 				if ("color" in styles.shadow) CONTEXT.shadowColor = styles.shadow.color;
 			}
 			if ("text" in styles) {
-				if ("font" in styles.text) CONTEXT.font = styles.font;
-				if ("align" in styles.text) CONTEXT.textAlign = styles.align;
-				if ("baseline" in styles.text) CONTEXT.textBaseline = styles.baseline;
+				if ("font" in styles.text) CONTEXT.font = styles.text.font;
+				if ("align" in styles.text) CONTEXT.textAlign = styles.text.align;
+				if ("baseline" in styles.text) CONTEXT.textBaseline = styles.text.baseline;
 			}
 
 			return publicAPI;
