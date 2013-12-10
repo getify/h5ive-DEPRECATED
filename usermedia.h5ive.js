@@ -7,7 +7,7 @@
 	var gUM = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
 	h5.userMedia = function(opts,successCB,failedCB) {
-		var publicAPI, success_cb, failed_cb, stream,
+		var publicAPI, success_cb, failed_cb, raw_stream,
 			success_args = [], failed_args = [], opts_str
 		;
 
@@ -27,7 +27,7 @@
 
 		function handleSuccess() {
 			var args = [].slice.call(arguments);
-			stream = args[0];
+			raw_stream = publicAPI.raw_stream = args[0];
 			if (window.webkitURL) {
 				args[0] = webkitURL.createObjectURL(args[0]);
 			}
@@ -52,7 +52,7 @@
 
 		function abort() {
 			try { stream.stop(); } catch (err) { }
-			stream = null;
+			stream = publicAPI.raw_stream = null;
 			return publicAPI;
 		}
 
