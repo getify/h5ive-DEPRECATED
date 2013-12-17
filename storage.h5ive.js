@@ -38,7 +38,7 @@
 		}
 
 		function get(keys) {
-			var i, val, ret = [], now = (new Date()).getTime();
+			var i, val, ret = {}, now = (new Date()).getTime();
 
 			if (Object.prototype.toString.call(keys) !== "[object Array]") keys = [keys];
 
