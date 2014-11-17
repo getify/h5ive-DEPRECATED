@@ -1,0 +1,25 @@
+{
+  "name": "h5ive",
+  "main": "h5ive.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/getify/h5ive",
+  "authors": [
+    "Kyle Simpson <getify@gmail.com>"
+  ],
+  "description": "A collection of thin facade APIs wrapped around HTML5 JavaScript features",
+  "keywords": [
+    "html5",
+    "canvas",
+    "storage",
+    "usermedia"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
